@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 500px;
+  padding-top: 60px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+img {
+  border-radius: 7px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.875em;
+  padding: 2.5em;
+}
+
+.title-h2 {
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+
+.about {
+  height: 56.25em;
+}
+
+.about-h2 {
+  text-align: center;
+  width: 59%;
+}
+
+.about p {
+  text-align: justify;
+  font-size: 1.4rem;
+  padding: 0.625em;
+}
+
+.paragraph {
+  text-align: right;
+  width: 75%;
+  font-size: 1.3em;
+}
+
+.row {
+  display: inline-block;
+  width: 49%;
+}
+
+.text {
+  vertical-align: top;
+}
+
+.text p {
+  margin-top: 0;
+}
+
+ol a {
+  text-decoration: none;
+  color: black;
+}
+
+li:hover {
+  display: inline-block;
+  background-color: #f7a59d;
+  border-radius: 3px;
+}
+
+.counters {
+  counter-reset: section;
+  margin-top: 2.5em;
+  margin-left: 2.5em;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+.counters li {
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.counters .section {
+  counter-increment: section;
+}
+
+.counters .subsection {
+  counter-increment: subsection;
+}
+
+.counters li::before {
+  content: counter(section) "." counter(subsection) " ";
+}
+
+.img-header {
+  margin-bottom: 5em;
+  margin-left: 1.875em;
+}
+
+.img-header img {
+  width: 100%;
+}
+.tribute-class {
+  height: 43.75em;
+  padding-top: 6.25em;
+}
+
+.tribute-img {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25em;
+  margin-left: 1.25em;
+  height: 35rem;
+  width: 35rem;
+  background-color: blue;
+}
+
+.tribute-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 7px;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image-overlay-blur {
+  backdrop-filter: blur(5px);
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+.image-overlay:hover > * {
+  transform: translateY(0px);
+}
+
+.image-overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image-description {
+  font-size: 1.25em;
+  margin-top: 2em;
+}
+
+.tribute-hover {
+  color: black;
+  text-decoration: none;
+  background-color: #e9dfd9;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+footer {
+  height: 10rem;
+  text-align: center;
+  padding-top: 1.25em;
+}
+
+footer img {
+  width: 10rem;
+  padding: 0.625em;
+}
+
+footer img:hover {
+  background-color: #f7a59d;
+  border-radius: 5px;
+}
+
+.line:before {
+  margin-left: -50%;
+  right: 30px;
+}
+
+.line:after {
+  left: 16px;
+  margin-right: -50%;
+}
+
+.line {
+  align-items: center;
+  color: #4b4b4b;
+  display: flex;
+  font-size: 27px;
+  font-weight: 700;
+  justify-content: center;
+  margin: 0 26px;
+  text-align: center;
+}
+
+.line::after,
+.line:before {
+  background-color: #f7a59d;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
